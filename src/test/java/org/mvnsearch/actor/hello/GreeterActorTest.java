@@ -26,6 +26,8 @@ public class GreeterActorTest {
         helloGreeter.tell(new NamedGreeter("Java"), ActorRef.noSender());
         helloGreeter.tell(new AnonymousGreeter(), ActorRef.noSender());
         Thread.sleep(1000);
+        actorSystem.actorSelection("/user/greeterActor").tell("Akka", ActorRef.noSender());
+        Thread.sleep(1000);
     }
 
 }
