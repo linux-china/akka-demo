@@ -1,0 +1,27 @@
+akka {
+  loglevel = debug
+  actor {
+    provider = "akka.cluster.ClusterActorRefProvider"
+    debug {
+      receive = off
+      lifecycle = off
+    }
+  }
+  remote {
+    log-remote-lifecycle-events = on
+    netty.tcp {
+      hostname = 127.0.0.1
+      port = 0
+    }
+  }
+  cluster {
+    seed-nodes = [
+      "akka.tcp://ClusterSystem@127.0.0.1:2551",
+      "akka.tcp://ClusterSystem@127.0.0.1:2552"
+    ]
+    # auto-down-unreachable-after = 10s
+  }
+}
+
+akka.extensions = ["akka.cluster.client.ClusterClientReceptionist"]
+
