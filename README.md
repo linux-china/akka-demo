@@ -11,7 +11,13 @@ Akka demo with Java8, Kotlin & Spring Framework.
 * Java 8
 * Kotlin
 * Spring 5
+* IntelliJ IDEA with Hocon plugin
 
+### Akka Demos
+
+* Akka Actor
+* Akka Remote
+* Akka Cluster
 
 ### References
 
