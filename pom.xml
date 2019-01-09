@@ -35,6 +35,10 @@
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-cluster_2.12</artifactId>
             <version>${akka.version}</version>
+        </dependency> <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-cluster-tools_2.12</artifactId>
+            <version>${akka.version}</version>
         </dependency>
         <!--spring framework-->
         <dependency>
