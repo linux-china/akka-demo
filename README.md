@@ -17,7 +17,7 @@ Akka demo with Java8, Kotlin & Spring Framework.
 
 * Akka Actor
 * Akka Remote
-* Akka Cluster
+* Akka Cluster: Please run ClusterSeedServers to start cluster seed servers.
 
 ### References
 
