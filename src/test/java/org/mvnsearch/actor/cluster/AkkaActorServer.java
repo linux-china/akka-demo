@@ -22,6 +22,7 @@ public class AkkaActorServer {
         Config config = ConfigFactory.parseURL(AkkaRemoteClient.class.getResource("/akka/cluster/cluster.conf"));
         ActorSystem actorSystem = ActorSystem.create("ClusterSystem", config);
         ActorRef ref = actorSystem.actorOf(Props.create(SampleActor.class), "sampleActor");
+        //register actor on cluster
         ClusterClientReceptionist.get(actorSystem).registerService(ref);
         ref.tell("hello", ActorRef.noSender());
         latch.await();
